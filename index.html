@@ -22,7 +22,7 @@
     <script>
 fetch('bookmarklet.js')
   .then(response => response.text())
-  .then(response => document.getElementsById('bookmarklet').setAttribute('href', 'response'))
+  .then(response => document.getElementById('bookmarklet').setAttribute('href', response))
     </script>
 
     <h3>Usage:</h3>
