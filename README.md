@@ -1,0 +1,1 @@
+PoE equipment planner: https://goo.gl/34m0XL
