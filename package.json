@@ -1,0 +1,10 @@
+{
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "dependencies": {
+    "babel-preset-es2015": "^6.3.13"
+  }
+}
