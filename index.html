@@ -3,19 +3,50 @@
   <head>
     <title>PoE equipment planner</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <style>
+body {
+  max-width: 651px;
+  margin: auto;
+}
+* {
+  font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+h1 {
+  font-size: 28px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 26.4px;
+}
+h3 {
+  font-size: 18px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 15.4px;
+}
+li,
+p {
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+    </style>
   </head>
   <body>
     <h1>PoE equipment planner</h1>
 
-    <p>A tool to simplify planning the equipment needed to reach resistance caps or attribute requirements.</p>
+    <p>A tool to simplify planning the equipment needed to reach resistance caps and attribute requirements.</p>
 
-    <p><a href="https://goo.gl/34m0XL" target="_blank">PoE equipment planner spreadsheet</a></p>
+    <p><a href="https://goo.gl/34m0XL" target="_blank">PoE equipment planner spreadsheet</a> (Google Sheets)</p>
 
     <p><a href="https://goo.gl/34m0XL" target="_blank"><img src="sheet.png" width="651" height="304" alt="Spreadsheet screenshot"></a></p>
 
     <p><img src="prompt.png" width="417" height="237" alt="Prompt screenshot"></p>
 
-    <h2><a id="bookmarklet">Fetch PoE items</a> (bookmark this)</h2>
+    <h2><a id="bookmarklet">Fetch PoE items</a> (bookmark this link)</h2>
     <noscript>
     Link requires scripting to work; <a href="bookmarklet.js">create bookmark manually</a>
     </noscript>
@@ -31,18 +62,18 @@ fetch('bookmarklet.js')
       <li>Bookmark the above "Fetch PoE items" link (click and drag it to the browser bookmarks bar, for example)</li>
       <li>Go to <a href="https://www.pathofexile.com/">www.pathofexile.com</a> (the front page)</li>
       <li>Use the "switch character" link and reload the page if you want to use a different character (the character panel doesn't need to be open, just the front page)</li>
-      <li>Click on the bookmark and it will show a prompt like in the screenshot; copy the text by pressing Ctrl+C (it will complain if you're not logged in or if it's a different location)</li>
-      <li>Go to the <a href="https://goo.gl/34m0XL" target="_blank">equipment planner spreadsheet</a> and press <em>File—Make a copy…</em> or <em>File—Download as</em> (if you haven't already) to be able to edit it (or go to your copy if you've already done it)</li>
+      <li>Click on the bookmark and it will show a prompt like in the screenshot (it will complain if you're not logged in or if it's a different location); copy the text in the prompt by pressing Ctrl+C</li>
+      <li>Go to the <a href="https://goo.gl/34m0XL" target="_blank">equipment planner spreadsheet</a> and press <em>File—Make a copy…</em> or <em>File—Download as</em> to be able to edit the values or go to your copy if you've already copied it</li>
       <li>Select the upper left cell that says "Ctrl+V" and press <kbd>Ctrl+V</kbd> to update the item values</li>
       <li>Fill out the attributes and resistances from passives (<a href="https://github.com/EmmittJ/PoESkillTree" target="_blank">PoE passive skill tree planner</a> is a great tool to find out the exact values for your build, just import your skill tree into it)
-      <li>Set the attribute requirements</li>
+      <li>Change the attribute or resistance requirements, missing attributes or resistances will be highlighted</li>
     </ol>
 
     <h3>How it works</h3>
 
     <p>The bookmarklet is a small script that fetches the items for the current character and formats them for pasting into the equipment planner spreadsheet.</p>
-    <p>See the <a href="https://github.com/slikts/fetchpoeitems/blob/master/lib/fetch.js">bookmarklet source</a>. You can build the bookmarklet from the source yourself by running <code><a href="https://github.com/slikts/fetchpoeitems/blob/master/build.sh">./build.sh</a></code></p>
-    <p>Tested in Chrome and Firefox.</p>
+    <p>See the <a href="https://github.com/slikts/fetchpoeitems/blob/master/lib/fetch.js">bookmarklet source</a>. You can build the bookmarklet from source yourself by running <code><a href="https://github.com/slikts/fetchpoeitems/blob/master/build.sh">./build.sh</a></code></p>
+    <p>Tested in Chrome 47 and Firefox 42.</p>
 
     <hr>
 
