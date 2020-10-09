@@ -2,4 +2,4 @@
 
 filename=bookmarklet.js
 
-echo -n "javascript:(function(){"`babel lib/fetch.js | uglifyjs`"})()"> $filename
+echo -n "javascript:(function(){"`./node_modules/@babel/cli/bin/babel.js lib/fetch.js | ./node_modules/uglify-js/bin/uglifyjs`"})()"> $filename
